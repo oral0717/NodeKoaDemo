@@ -7,5 +7,5 @@ router.get('/user', ctx => {
   ctx.body = '这是个用户页面啦'
 })
 
-app.use(router.routes())
+app.use(router.routes())//启动路由
 app.listen(4000)

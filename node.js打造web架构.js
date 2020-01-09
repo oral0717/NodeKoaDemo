@@ -1,5 +1,3 @@
-import { Http2ServerRequest } from "http2";
-
 // 20200103
 // 运行于服务端的js运行平台，是对v8引擎的封装
 // 作为中间层
@@ -28,16 +26,61 @@ import { Http2ServerRequest } from "http2";
 // get数据在url上，数据小
 // post数据在body里，数据庞大，在node中可以分段传送
 
-
-
-// 作业：
+// 作业：firstExercise文件夹,听课代码firstDemo
 // 用原生js实现服务端，支持get,post,处理静态资源
 // koa的安装和基本使用
 // 作业提交邮箱
 
+// 20200105
+// 中间件
+// 洋葱模型
+// koa模板ejx
 
+// 中间件：函数,实现某个特定功能的插件；
+// 特点：封装了一些处理完整时间的功能函数；非内置的中间件要安装后require进来；封装了一些或许复杂但是很通用的功能
+// app.use()注册中间件，中间件是个匿名函数
+// async,await处理异步
+// await作用：求值
+let a = await 100*100
+console.log(a) // 10000
 
+// axios，发送请求的包
+axios.get(api)
 
+// 监听程序运行时间
+console.time('time1')
+{程序语句}
+console.timeEnd('time1')
+
+// node.js后台，可以访问数据库
+// navicat数据库软件
+
+// 项目里路由要单独独立出一个文件
+
+// Linux命令之 touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件。
+// ls -l 可以显示档案的时间记录。
+
+// config.js里放自己的配置信息，如数据库连接信息
+
+// koa-static koa中处理静态资源的包（中间件）
+// koa-ejs koa中处理html模板引擎ejs的包
+// koa-bodyparser koa解析post数据
+// path,处理路径
+// mysql包，
+// co-mysql包，
+
+// 操作数据库，在路由里写
+
+// smarty模板引擎
+
+// 作业：
+// 1.完成error中间件
+// 2.完成登录功能
+
+// 20200107
+// api接口实现
+// 中间层
+// 现代web架构分析
 
 
 
