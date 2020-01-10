@@ -20,6 +20,7 @@ router.post('/login',async ctx=>{
   // console.log(username,password)
   // 前端传过来用户名和密码后，接下来后台把用户名和密码放到数据库里去匹配，如果查询结果存在，那用户名和密码有效
   // 处理密码
+console.log(username,password)
   password = md5(password)
   let data = await ctx.db.query(`SELECT user,password FROM admin WHERE user = '${username}' AND password = '${password}' LIMIT 1`)
   console.log(data)

@@ -1,0 +1,14 @@
+### 供测试接口用的文件
+### 定义变量@url,@type
+@url = http://localhost:3000/api
+###
+@type = Content-Type: application/json
+
+### 注册用户的接口
+POST {{ url }}/register HTTP/1.1
+{{type}}
+
+{
+  "username": "admin2werrrt",
+  "password": 123456
+}
