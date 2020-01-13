@@ -36,14 +36,14 @@
       <div class="col-lg-8">
         <div class="login">
 
-          <h1>Login</h1>
+          <h1>JOIN US</h1>
 
           <!-- Loging form -->
           <div class="form-group">
-            <input type="text" class="form-control" id="userName" placeholder="输入用户名">
+            <input type="text" class="form-control" id="userName" placeholder="Enter YOUR Name">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="password" placeholder="输入密码">
+            <input type="password" class="form-control" id="password" placeholder="Enter YOUR PASSWORD">
           </div>
 
           <div class="form-check">
@@ -55,7 +55,8 @@
           </div>
 
           <br>
-          <p id='submit' class="btn btn-lg btn-block btn-success">Sign in</p>
+          <p id='loginzz' class="btn btn-lg btn-block btn-success">Sign in</p>
+          <p id='registerzz' class="btn btn-lg btn-block btn-success">Register</p>
           <!-- End Loging form -->
 
         </div>
@@ -67,7 +68,7 @@
 <script src="<%=URL_PATH%>/js/jquery.js"></script>
 <script>
   $(function () {
-    $('#submit').on('click', function () {
+    $('#loginzz').on('click', function () {
       var username = $('#userName').val()
       var password = $('#password').val()
       $.ajax({
@@ -77,12 +78,34 @@
           'password': password
         },
         type: 'post',
-        dataType: 'json',
-        success: function(){
-          console.log('success')
+        dataType: '',
+        success: function(data){
+          console.log('success',data)
         },
-        fail: function(){
-          console.log('fail')
+        fail: function(error){
+          console.log('fail',error)
+        },
+        complete: function(){
+          console.log('complete')
+        }
+      })
+    })
+    $('#registerzz').on('click', function () {
+      var username = $('#userName').val()
+      var password = $('#password').val()
+      $.ajax({
+        url: '/api/register',
+        data: {
+          'username': username,
+          'password': password
+        },
+        type: 'post',
+        dataType: '',
+        success: function(data){
+          console.log('success',data)
+        },
+        fail: function(error){
+          console.log('fail',error)
         },
         complete: function(){
           console.log('complete')

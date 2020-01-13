@@ -9,6 +9,6 @@ POST {{ url }}/register HTTP/1.1
 {{type}}
 
 {
-  "username": "admin2werrrt",
+  "username": "zz2",
   "password": 123456
 }

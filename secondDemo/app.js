@@ -5,10 +5,11 @@ const path = require('path')
 const config = require('./config')
 const static = require('koa-static')
 const body = require('koa-bodyparser')
+const error = require('./middleware/error');
 
 const app = new Koa()
 const router = new Router()
-
+app.use(error)
 app.use(body())
 
 ejs(app,{
