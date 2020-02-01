@@ -12,3 +12,12 @@ POST {{ url }}/register HTTP/1.1
   "username": "zz2",
   "password": 123456
 }
+
+### 中间层测试
+POST {{ url }}/reg HTTP/1.1
+{{type}}
+
+{
+  "username": "zz2",
+  "password": 123456
+}
