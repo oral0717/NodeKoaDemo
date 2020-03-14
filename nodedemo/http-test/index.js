@@ -26,12 +26,10 @@ const server = http.createServer((req, res)=>{
 
   if (method === 'POST') {
     let postData = ''
-    // 监听传递数据
-    req.on('data', chunk => {
+    req.on('data', (chunk) => {
       postData += chunk.toString()
     })
-    // 监听数据传递完毕，自动执行
-    req.on('end', () => {
+    req.on('end', ()=>{
       resData.postData = postData
       res.end(JSON.stringify(resData))
     })
