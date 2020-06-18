@@ -1,5 +1,6 @@
 const handlerBlogRouter = (req, res) => {
-  if (req.method === 'GET' && req.path === '/api/blog/list') {
+  console.log(req.method)
+  if (req.path === '/api/blog/list') {
     return {
       msg: '列表接口'
     }
